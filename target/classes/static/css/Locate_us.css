@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+body {
+	background-color: #2A2A2A;
+	font-family: 'Rethink Sans';
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-family: 'Rethink Sans';
+	margin-top: 50px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 40px;
+	letter-spacing: 2px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.location {
+	border: 2px solid black;
+	height: max-content;
+	width: max-content;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}

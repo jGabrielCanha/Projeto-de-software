@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.com">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Home</title>
+	<link href="https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="" th:href="@{/css/Navigation.css}" />
+	<link rel="stylesheet" href="" th:href="@{css/Home.css}" />
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<nav th:replace="~{Navigation::navbar()}"></nav>
+<div class="background">
+	<video src="/Videos/teaTree.mp4" loop autoplay muted></video>
+	<div class="text">
+		<h1 class="main-title">DESCUBRA NOSSA VARIEDADE</h1>
+		<h3 class="sub-title">Produtos Premium para Transformar Seu Dia a Dia!</h3>
+	</div>
+</div>
+</body>
+
+</html>

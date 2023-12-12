@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Login</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link rel="stylesheet" href="" th:href="@{/css/Navigation.css}" />
+	<link rel="stylesheet" href="" th:href="@{/css/Login.css}" />
+</head>
+
+<body>
+	<nav th:replace="~{Navigation::navbar()}">
+	</nav>
+	<div class="LoginContainer">
+		<div class="admin">
+			<div class="content">
+				<strong style="font-size: 16px;margin-bottom: 0px;">BUSINESS</strong>
+				<h2> Para <span style="color:green;">Administradores</span></h2>
+
+				<form action="" th:action="@{/adminLogin}">
+					<b>Email :</b>
+					<input type="email" name="email" placeholder="Insira seu email..." class="email"> <br />
+
+					<b> Senha:</b>
+					<input type="password" name="password" placeholder="Insira sua senha" class="password">
+					<small style="color: red;" th:text="${error}"></small><br />
+					<button type="submit" class="loginButton">Log in</button>
+				</form>
+			</div>
+		</div>
+		<div class="user">
+			<div class="content">
+				<h2> Para <span style="color:green;">Usuários</span></h2>
+				<form action="" th:action="@{/userlogin}" class="form">
+					<b>Email :</b>
+					<input type="email" name="userEmail" placeholder="Insira seu email...">
+					<!--		th:classappend="${#fields.hasErrors('userEmail')?'emailError':''}">-->
+
+					<!--<div style="color: red;font-size: 16px;" class="emailError" th:each="e :${#fields.errors('userEmail')}" th:text="${e}">
+					</div>--> <br />
+
+
+					<b> Senha:</b>
+					<input type="password" name="userPassword" placeholder="Insira sua senha" required maxlength="8"
+						minlength="4" class="userPassword">
+					<!--th:classappend="${#fields.hasErrors('userPassword')?'passwordError':'userPassword'}">-->
+					<!--<div style="color: red;font-size: 16px;" class="passwordError" th:each="e :${#fields.errors('userPassword')}" th:text="${e}">
+					</div>-->
+					<small style="color: red;" th:text="${error2}"></small><br />
+					<button type="submit" class="loginButton">Log in</button><br>
+
+					<p>Não possui conta ? <a href="register.html" style="color: green;">Registre-se aqui</a></p>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

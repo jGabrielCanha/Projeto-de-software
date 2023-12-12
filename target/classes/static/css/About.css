@@ -1,0 +1,48 @@
+@charset "ISO-8859-1";
+
+/* Importação da fonte Rethink Sans do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rethink+Sans&display=swap');
+
+body {
+	background-color: #2A2A2A;
+	color: white;
+	margin: 0;
+	font-family: 'Rethink Sans', sans-serif; /* Aplicando a fonte Rethink Sans */
+}
+
+.information {
+	position: relative;
+	top: 50px;
+	width: 70%;
+	text-align: left;
+	font-size: 16px;
+	margin: 0 auto;
+}
+
+/* Estilo para o texto "Sobre Nós" */
+.information h1 {
+	color: darkgreen;
+	text-align: left;
+}
+
+.information p {
+	text-align: left;
+}
+
+.icons {
+	position: fixed;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	font-size: 14px;
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center; /* Alinhar verticalmente no centro */
+}
+
+/* Estilo para os ícones das redes sociais */
+.icons img {
+	margin-right: 10px;
+}

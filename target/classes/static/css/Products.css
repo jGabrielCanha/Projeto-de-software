@@ -1,0 +1,42 @@
+@charset "ISO-8859-1";
+body {
+	background-color: #2A2A2A;
+	font-size: 17px;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	height: 400px;
+	width: 600px;
+}
+
+section {
+	text-align: center;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+div {
+	box-shadow: 5px 5px 8px black;
+	margin-top: 30px;
+	background-color: white;
+	padding: 15px;
+	height: max-content;
+}
+
+span {
+	color: darkgreen;
+	font-weight: bold;
+}
+
+#buy {
+	color: black;
+	background-color: darkgreen;
+	border: none;
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 8px; /* Bordas arredondadas */
+	box-shadow: 0px 0px 5px black; /* Sombra preta nas bordas */
+}
