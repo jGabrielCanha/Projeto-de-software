@@ -1,10 +1,8 @@
 package com.business.entities;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
 @Entity // Indica que essa classe é uma entidade JPA e será mapeada para uma tabela no banco de dados
 public class Product {
 	@Id // Indica a chave primária da entidade

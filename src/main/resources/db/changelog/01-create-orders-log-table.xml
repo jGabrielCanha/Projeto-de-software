@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="create-table-orders-log-01" author="edu">
+        <createTable tableName="orders_log">
+            <column name="log_id" type="int" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="order_id" type="int"/>
+            <column name="original_o_name" type="varchar(255)"/>
+            <column name="original_o_price" type="double"/>
+            <column name="original_o_quantity" type="int"/>
+            <column name="original_order_date" type="datetime(6)"/>
+            <column name="original_total_amount" type="double"/>
+            <column name="log_time" type="timestamp" defaultValueComputed="CURRENT_TIMESTAMP"/>
+            <column name="action_type" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

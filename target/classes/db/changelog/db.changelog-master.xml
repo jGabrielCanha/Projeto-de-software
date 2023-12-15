@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Criação da tabela orders_log -->
+    <include file="01-create-orders-log-table.xml" relativeToChangelogFile="true"/>
+
+    <!-- Criação da view order_summary -->
+    <include file="02-create-view.xml" relativeToChangelogFile="true"/>
+
+    <!-- Criação do trigger after_orders_update -->
+    <include file="03-create-trigger.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>
